@@ -1,301 +1,291 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ram Giri Studio</title>
+  <title>Giri Digital Tech Solution Pvt. Ltd.</title>
   <style>
     body {
-      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9fafb;
-      color: #111827;
-      line-height: 1.6;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8fafc;
+      color: #1f2937;
     }
 
-    .main-header {
-      background-color: #0f172a;
+    header {
+      background: #0f172a;
       padding: 20px 0;
-      color: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
-    .main-header .container {
+    nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 30px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
     }
 
     .logo {
-      font-size: 24px;
+      color: white;
       font-weight: bold;
+      font-size: 20px;
     }
 
-    .menu {
+    .nav-buttons {
       list-style: none;
       display: flex;
-      gap: 25px;
-      margin: 0;
-      padding: 0;
+      gap: 20px;
     }
 
-    .menu li {
+    .nav-buttons li {
       position: relative;
     }
 
-    .menu a {
+    .nav-buttons a {
       color: white;
       text-decoration: none;
-      font-weight: 500;
-      padding: 8px 12px;
-      border-radius: 4px;
+      padding: 10px 18px;
+      border-radius: 5px;
+      background: #1e40af;
       transition: background 0.3s ease;
     }
 
-    .menu a:hover {
-      background-color: #1e293b;
+    .nav-buttons a:hover {
+      background: #2563eb;
     }
 
-    .submenu {
-      display: none;
+    .dropdown ul {
       position: absolute;
-      top: 35px;
+      top: 40px;
       left: 0;
-      background-color: #1e293b;
-      padding: 10px 0;
-      border-radius: 6px;
-      min-width: 160px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      display: none;
+      background: #1e293b;
+      list-style: none;
+      padding: 10px;
+      border-radius: 5px;
     }
 
-    .submenu a {
-      display: block;
-      padding: 10px 15px;
-      color: #f1f5f9;
-    }
-
-    .dropdown:hover .submenu {
+    .dropdown:hover ul {
       display: block;
     }
 
-    section {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
+    .dropdown ul li {
+      margin-bottom: 8px;
     }
 
-    .cta {
+    .dropdown ul li a {
+      background: none;
+      padding: 6px 10px;
+      display: block;
+      color: #fff;
+    }
+
+    .hero {
       text-align: center;
-      margin-top: 50px;
+      padding: 60px 20px;
     }
 
-    .button {
+    .hero h1 {
+      font-size: 36px;
+      color: #0f172a;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin: 15px 0 30px;
+    }
+
+    .hero a {
       background: #3b82f6;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 24px;
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 270px;
+      text-align: center;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #1e3a8a;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #475569;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 15px;
+      background: #3b82f6;
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .features, .pricing, .testimonials {
+      background: #f1f5f9;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #e5e7eb;
+      background: #0f172a;
+      color: white;
       font-size: 14px;
-    }.tools {
-  padding: 50px 20px;
-  background: #f1f5f9;
-  text-align: center;
-}
-
-.tool-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 30px;
-}
-.tool-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 30px;
-}  <-- keep this
-
-/* Paste below this bracket */
-
-.tool {
-  background: linear-gradient(to bottom right, #ffffff, #f0f4f8);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  padding: 20px;
-  width: 270px;
-  transition: transform 0.2s ease;
-}
-
-.tool:hover {
-  transform: translateY(-6px);
-}
-
-.tool h3 {
-  font-size: 18px;
-  color: #1e3a8a;
-  margin-top: 0;
-}
-
-.tool p {
-  font-size: 14px;
-  color: #475569;
-  margin-bottom: 15px;
-}
-
-.tool .button {
-  background: #3b82f6;
-  padding: 8px 16px;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-.tool {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  padding: 20px;
-  width: 280px;
-}
-
-.tool h3 {
-  margin-top: 0;
-}
-
-.tool .button {
-  margin-top: 15px;
-  display: inline-block;
-}
+    }
   </style>
 </head>
 <body>
 
-  <header class="main-header">
-    <div class="container">
-      <h1 class="logo">Ram Giri Studio</h1>
-      <nav>
-        <ul class="menu">
-          <li><a href="#">Home</a></li>
-<li class="dropdown">
-<li class="dropdown">
-  <a href="#">Our SaaS Tools</a>
-  <ul class="submenu">
-    <li><a href="#seo">SEO Boost PDF</a></li>
-    <li><a href="#invoice">Invoice Generator</a></li>
-    <li><a href="#resume">Resume Builder</a></li>
-    <li><a href="#logo">Logo Maker</a></li>
-  </ul>
-</li>
-  <ul class="submenu">
-    <li><a href="#">SEO Boost PDF</a></li>
-    <li><a href="#">Invoice Generator</a></li>
-    <li><a href="#">Resume Builder</a></li>
-    <li><a href="#">Logo Maker</a></li>
-  </ul>
-</li>          <li><a href="#">Digital Products</a></li>
-          <li class="dropdown">
-            <a href="#">Services</a>
-            <ul class="submenu">
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">SEO Audits</a></li>
-              <li><a href="#">App UI/UX</a></li>
-            </ul>
-          </li>
-          <li><a href="mailto:hello@yourdomain.com">Contact</a></li>
+<header>
+  <nav>
+    <div class="logo">Giri Digital Tech Solution Pvt. Ltd.</div>
+    <ul class="nav-buttons">
+      <li><a href="#">Home</a></li>
+      <li class="dropdown">
+        <a href="#">SaaS Tools</a>
+        <ul>
+          <li><a href="#">SEO Audit</a></li>
+          <li><a href="#">Invoice Maker</a></li>
+          <li><a href="#">Resume Builder</a></li>
         </ul>
-      </nav>
-    </div>
-  </header>
+      </li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <section>
-    <h2>Welcome to Ram Giri Digital Studio</h2>
-    <p>We craft high-performance websites, design smart SaaS tools, and help brands grow through digital innovation.</p>
+<section class="hero">
+  <h1>Smart SaaS Solutions Built in Nepal</h1>
+  <p>Helping global businesses scale faster with AI-powered digital tools.</p>
+  <a href="#connect">Get Connected</a>
+</section>
 
-    <div class="cta">
-      <a class="button" href="mailto:hello@yourdomain.com">Get in Touch</a>
-    </div>
-  </section>
-<section class="tools">
-  <h2>Our SaaS & Digital Tools</h2>
-  <div class="tool-box">
-
-    <div class="tool" id="seo">
+<section class="section tools">
+  <h2>Our SaaS Products</h2>
+  <div class="grid">
+    <div class="card">
       <h3>SEO Boost PDF</h3>
-      <p>Instant SEO audit in PDF format.</p>
-      <a class="button" href="https://example.com/seo-demo">Try Demo</a>
+      <p>Instant SEO report in downloadable format.</p>
+      <a href="#">Try Demo</a>
     </div>
-
-    <div class="tool" id="invoice">
+    <div class="card">
       <h3>Invoice Generator</h3>
-      <p>Create professional invoices in seconds.</p>
-      <a class="button" href="https://example.com/invoice-demo">Start Now</a>
+      <p>Bill your clients in seconds with branded invoices.</p>
+      <a href="#">Start Now</a>
     </div>
-
-    <div class="tool" id="resume">
-      <h3>Resume Builder</h3>
-      <p>Design beautiful resumes instantly.</p>
-      <a class="button" href="https://example.com/resume-builder">Build Now</a>
+    <div class="card">
+      <h3>Resume Builder Pro</h3>
+      <p>Design modern CVs and export as PDF.</p>
+      <a href="#">Create Resume</a>
     </div>
-
-    <div class="tool" id="logo">
-      <h3>Logo Maker Lite</h3>
-      <p>Create logos for your brand in seconds.</p>
-      <a class="button" href="https://example.com/logo-maker">Make Logo</a>
-    </div>
-
-    <div class="tool">
-      <h3>Business Name Maker</h3>
-      <p>Generate catchy business names.</p>
-      <a class="button" href="https://example.com/name-maker">Generate</a>
-    </div>
-
-    <div class="tool">
-      <h3>Landing Page Builder</h3>
-      <p>Auto-generate landing pages.</p>
-      <a class="button" href="https://example.com/landing-page">Launch Tool</a>
-    </div>
-
-    <div class="tool">
-      <h3>eBook Cover Creator</h3>
-      <p>Design 3D ebook covers easily.</p>
-      <a class="button" href="https://example.com/cover-tool">Create Cover</a>
-    </div>
-
-    <div class="tool">
-      <h3>Website Audit Checker</h3>
-      <p>Check your site’s health instantly.</p>
-      <a class="button" href="https://example.com/audit-tool">Scan Site</a>
-    </div>
-
-    <div class="tool">
-      <h3>Link Cloaker</h3>
-      <p>Protect & shorten affiliate links.</p>
-      <a class="button" href="https://example.com/cloaker">Shorten</a>
-    </div>
-
-    <div class="tool">
+    <div class="card">
       <h3>Privacy Policy Generator</h3>
-      <p>Create privacy policies legally.</p>
-      <a class="button" href="https://example.com/privacy-gen">Generate Docs</a>
+      <p>Instant legal policies for your website.</p>
+      <a href="#">Generate</a>
     </div>
-
+    <div class="card">
+      <h3>Link Shortener + Tracker</h3>
+      <p>Protect and monitor affiliate links easily.</p>
+      <a href="#">Cloak Now</a>
+    </div>
+    <div class="card">
+      <h3>Logo Maker AI</h3>
+      <p>Smart branding in seconds — free download.</p>
+      <a href="#">Create Logo</a>
+    </div>
+    <div class="card">
+      <h3>Business Name Generator</h3>
+      <p>Catchy, AI-suggested names for your startup.</p>
+      <a href="#">Generate Now</a>
+    </div>
+    <div class="card">
+      <h3>Landing Page Creator</h3>
+      <p>Pre-built sections & export-ready pages.</p>
+      <a href="#">Try It</a>
+    </div>
+    <div class="card">
+      <h3>Contract Builder</h3>
+      <p>Quick freelance/client agreement tool.</p>
+      <a href="#">Build Contract</a>
+    </div>
+    <div class="card">
+      <h3>Course Syllabus Designer</h3>
+      <p>Auto-format professional course outlines.</p>
+      <a href="#">Start Designing</a>
+    </div>
+    <div class="card">
+      <h3>eBook Cover Generator</h3>
+      <p>Beautiful 3D mockups from your title.</p>
+      <a href="#">Make Cover</a>
+    </div>
+    <div class="card">
+      <h3>Video Script Generator</h3>
+      <p>YouTube & Reels-friendly AI writing.</p>
+      <a href="#">Write Script</a>
+    </div>
+    <div class="card">
+      <h3>Email Subject Line AI</h3>
+      <p>Get perfect open rates with optimized titles.</p>
+      <a href="#">Generate Ideas</a>
+    </div>
+    <div class="card">
+      <h3>Website Audit Scanner</h3>
+      <p>Health, mobile speed, SEO performance.</p>
+      <a href="#">Scan Now</a>
+    </div>
+    <div class="card">
+      <h3>Terms & Conditions Maker</h3>
+      <p>Custom legal T&C for your SaaS or service.</p>
+      <a href="#">Create Policy</a>
+    </div>
   </div>
 </section>
-</section>
-  <footer>
-    <p>© 2025 Ram Giri Studio | Kathmandu, Nepal</p>
-  </footer>
+
+<footer id="connect">
+  <p>Contact Us — Giri Digital Tech Solution Pvt. Ltd.<br>
+  Kathmandu, Nepal | +977-9702456234<br>
+  support@giridigitaltechsolution.com</p>
+</footer>
 
 </body>
 </html>
