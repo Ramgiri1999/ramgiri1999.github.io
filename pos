@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>POS Solutions - Giri Digital Tech Solution</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #0f172a;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .content {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .content h2 {
+      color: #1e3a8a;
+    }
+    .testimonials {
+      margin-top: 40px;
+      padding: 20px;
+      background: #e0f7e9;
+      border-radius: 10px;
+    }
+    .testimonial {
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .testimonial::before {
+      content: '✔️';
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>POS Solutions - Giri Digital Tech Solution</header>
+  <div class="content">
+    <h2>Modern POS Software for Retail and Billing</h2>
+    <p>Our POS system helps you manage inventory, track sales, generate receipts, and streamline customer billing in real time.</p>
+    <ul>
+      <li>Multi-store Inventory Management</li>
+      <li>Real-time Sales Reports</li>
+      <li>Barcode Scanning & Receipt Printing</li>
+      <li>Cash, Card, and Digital Payment Integration</li>
+    </ul>
+
+    <div class="testimonials">
+      <h3>What Retailers Say</h3>
+      <div class="testimonial">"It replaced our old billing system in one day." — Everest Mart</div>
+      <div class="testimonial">"Super clean and fast billing POS. Easy even for new staff!" — BhatBhateni Store</div>
+    </div>
+  </div>
+</body>
+</html>
