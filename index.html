@@ -1,64 +1,110 @@
-<!-- HEADER -->
-<header class="topbar">
-  <nav class="navbar">
-    <div class="logo">Giri Digital Tech</div>
-    <ul class="nav-menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">Templates</a></li>
-      <li><a href="#">Pricing</a></li>
-      <li><a href="#">Contact</a></li>
+<!-- PROFESSIONAL HEADER WITH DROPDOWNS -->
+<header style="background: white; border-bottom: 1px solid #e5e7eb; box-shadow: 0 2px 8px rgba(0,0,0,0.05); font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 1280px; margin: auto; padding: 20px 30px; display: flex; align-items: center; justify-content: space-between;">
+    <div style="font-size: 22px; font-weight: bold; color: #1e3a8a;">Giri Digital Tech Solution</div>
+  </div>
+  <nav style="max-width: 1280px; margin: auto; padding: 12px 30px; border-top: 1px solid #e5e7eb;">
+    <ul style="list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 0; margin: 0;">
+      
+      <!-- Custom Software -->
+      <li style="position: relative;">
+        <a href="#" style="text-decoration: none; color: #1f2937; padding: 10px 14px; font-weight: 500;">Custom Software ▼</a>
+        <ul style="display: none; position: absolute; top: 40px; left: 0; background: white; box-shadow: 0 8px 16px rgba(0,0,0,0.08); border-radius: 6px; list-style: none; padding: 10px 0;">
+          <li><a href="#">CRM Systems</a></li>
+          <li><a href="#">POS Solutions</a></li>
+        </ul>
+      </li>
+
+      <!-- Web Development -->
+      <li style="position: relative;">
+        <a href="#">Web Development ▼</a>
+        <ul style="display: none; position: absolute; top: 40px;">
+          <li><a href="#">Portfolio Sites</a></li>
+          <li><a href="#">E-commerce</a></li>
+          <li><a href="#">Booking Platforms</a></li>
+        </ul>
+      </li>
+
+      <!-- Mobile App UI/UX -->
+      <li style="position: relative;">
+        <a href="#">Mobile App UI/UX ▼</a>
+        <ul style="display: none; position: absolute; top: 40px;">
+          <li><a href="#">App UI Design</a></li>
+          <li><a href="#">Prototypes</a></li>
+        </ul>
+      </li>
+
+      <!-- Digital Products -->
+      <li style="position: relative;">
+        <a href="#">Digital Products ▼</a>
+        <ul style="display: none; position: absolute; top: 40px;">
+          <li><a href="#">Mandalas</a></li>
+          <li><a href="#">Spiritual Posters</a></li>
+          <li><a href="#">Wallpapers</a></li>
+        </ul>
+      </li>
+
+      <!-- Design Services -->
+      <li style="position: relative;">
+        <a href="#">Design Services ▼</a>
+        <ul style="display: none; position: absolute; top: 40px;">
+          <li><a href="#">Logo Design</a></li>
+          <li><a href="#">Social Media Kits</a></li>
+          <li><a href="#">Flyers & Posters</a></li>
+        </ul>
+      </li>
+
+      <!-- SEO Services -->
+      <li style="position: relative;">
+        <a href="#">SEO Services ▼</a>
+        <ul style="display: none; position: absolute; top: 40px;">
+          <li><a href="#">SEO Audit</a></li>
+          <li><a href="#">Keyword Strategy</a></li>
+        </ul>
+      </li>
+
+      <!-- Content Tools -->
+      <li style="position: relative;">
+        <a href="#">Content Tools ▼</a>
+        <ul style="display: none; position: absolute; top: 40px;">
+          <li><a href="#">AI Blog Headline</a></li>
+          <li><a href="#">Video Scripts</a></li>
+        </ul>
+      </li>
+
+      <!-- Automation Help -->
+      <li style="position: relative;">
+        <a href="#">Automation Help ▼</a>
+        <ul style="display: none; position: absolute; top: 40px;">
+          <li><a href="#">Form to Sheet</a></li>
+          <li><a href="#">Zapier Setup</a></li>
+        </ul>
+      </li>
+
+      <!-- Client Tools -->
+      <li style="position: relative;">
+        <a href="#">Client Tools ▼</a>
+        <ul style="display: none; position: absolute; top: 40px;">
+          <li><a href="#">Proposal Maker</a></li>
+          <li><a href="#">Contract Builder</a></li>
+          <li><a href="#">Invoice Generator</a></li>
+        </ul>
+      </li>
+      
     </ul>
   </nav>
 </header>
 
-<!-- CSS STYLE -->
-<style>
-.topbar {
-  background: white;
-  border-bottom: 1px solid #e5e7eb;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 20px;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: #1e3a8a;
-}
-
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-menu li a {
-  text-decoration: none;
-  color: #1f2937;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 8px 12px;
-  transition: 0.3s;
-  border-radius: 6px;
-}
-
-.nav-menu li a:hover {
-  background: #f3f4f6;
-  color: #2563eb;
-}
-</style>
+<!-- JS to Show/Hide Dropdowns -->
+<script>
+  document.querySelectorAll("nav ul li").forEach(li => {
+    li.addEventListener("mouseenter", () => {
+      const submenu = li.querySelector("ul");
+      if (submenu) submenu.style.display = "block";
+    });
+    li.addEventListener("mouseleave", () => {
+      const submenu = li.querySelector("ul");
+      if (submenu) submenu.style.display = "none";
+    });
+  });
+</script>
