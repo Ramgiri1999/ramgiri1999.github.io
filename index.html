@@ -105,7 +105,36 @@
       padding: 20px;
       background: #e5e7eb;
       font-size: 14px;
-    }
+    }.tools {
+  padding: 50px 20px;
+  background: #f1f5f9;
+  text-align: center;
+}
+
+.tool-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.tool {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  padding: 20px;
+  width: 280px;
+}
+
+.tool h3 {
+  margin-top: 0;
+}
+
+.tool .button {
+  margin-top: 15px;
+  display: inline-block;
+}
   </style>
 </head>
 <body>
@@ -140,7 +169,26 @@
       <a class="button" href="mailto:hello@yourdomain.com">Get in Touch</a>
     </div>
   </section>
-
+<section class="tools">
+  <h2>Our SaaS Tools</h2>
+  <div class="tool-box">
+    <div class="tool">
+      <h3>SEO Boost PDF</h3>
+      <p>Instant website audit in PDF format, powered by AI.</p>
+      <a class="button" href="#">Try Demo</a>
+    </div>
+    <div class="tool">
+      <h3>Invoice Generator</h3>
+      <p>Create professional invoices in seconds.</p>
+      <a class="button" href="#">Start Now</a>
+    </div>
+    <div class="tool">
+      <h3>AI Business Name Maker</h3>
+      <p>Get creative, brandable names for your business instantly.</p>
+      <a class="button" href="#">Try Free</a>
+    </div>
+  </div>
+</section>
   <footer>
     <p>© 2025 Ram Giri Studio | Kathmandu, Nepal</p>
   </footer>
