@@ -118,7 +118,49 @@
   justify-content: center;
   margin-top: 30px;
 }
+.tool-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}  <-- keep this
 
+/* Paste below this bracket */
+
+.tool {
+  background: linear-gradient(to bottom right, #ffffff, #f0f4f8);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+  width: 270px;
+  transition: transform 0.2s ease;
+}
+
+.tool:hover {
+  transform: translateY(-6px);
+}
+
+.tool h3 {
+  font-size: 18px;
+  color: #1e3a8a;
+  margin-top: 0;
+}
+
+.tool p {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 15px;
+}
+
+.tool .button {
+  background: #3b82f6;
+  padding: 8px 16px;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
 .tool {
   background: white;
   border-radius: 10px;
@@ -146,7 +188,15 @@
         <ul class="menu">
           <li><a href="#">Home</a></li>
 <li class="dropdown">
+<li class="dropdown">
   <a href="#">Our SaaS Tools</a>
+  <ul class="submenu">
+    <li><a href="#seo">SEO Boost PDF</a></li>
+    <li><a href="#invoice">Invoice Generator</a></li>
+    <li><a href="#resume">Resume Builder</a></li>
+    <li><a href="#logo">Logo Maker</a></li>
+  </ul>
+</li>
   <ul class="submenu">
     <li><a href="#">SEO Boost PDF</a></li>
     <li><a href="#">Invoice Generator</a></li>
@@ -177,24 +227,71 @@
     </div>
   </section>
 <section class="tools">
-  <h2>Our SaaS Tools</h2>
+  <h2>Our SaaS & Digital Tools</h2>
   <div class="tool-box">
-    <div class="tool">
+
+    <div class="tool" id="seo">
       <h3>SEO Boost PDF</h3>
-      <p>Instant website audit in PDF format, powered by AI.</p>
-      <a class="button" href="#">Try Demo</a>
+      <p>Instant SEO audit in PDF format.</p>
+      <a class="button" href="https://example.com/seo-demo">Try Demo</a>
     </div>
-    <div class="tool">
+
+    <div class="tool" id="invoice">
       <h3>Invoice Generator</h3>
       <p>Create professional invoices in seconds.</p>
-      <a class="button" href="#">Start Now</a>
+      <a class="button" href="https://example.com/invoice-demo">Start Now</a>
     </div>
+
+    <div class="tool" id="resume">
+      <h3>Resume Builder</h3>
+      <p>Design beautiful resumes instantly.</p>
+      <a class="button" href="https://example.com/resume-builder">Build Now</a>
+    </div>
+
+    <div class="tool" id="logo">
+      <h3>Logo Maker Lite</h3>
+      <p>Create logos for your brand in seconds.</p>
+      <a class="button" href="https://example.com/logo-maker">Make Logo</a>
+    </div>
+
     <div class="tool">
-      <h3>AI Business Name Maker</h3>
-      <p>Get creative, brandable names for your business instantly.</p>
-      <a class="button" href="#">Try Free</a>
+      <h3>Business Name Maker</h3>
+      <p>Generate catchy business names.</p>
+      <a class="button" href="https://example.com/name-maker">Generate</a>
     </div>
+
+    <div class="tool">
+      <h3>Landing Page Builder</h3>
+      <p>Auto-generate landing pages.</p>
+      <a class="button" href="https://example.com/landing-page">Launch Tool</a>
+    </div>
+
+    <div class="tool">
+      <h3>eBook Cover Creator</h3>
+      <p>Design 3D ebook covers easily.</p>
+      <a class="button" href="https://example.com/cover-tool">Create Cover</a>
+    </div>
+
+    <div class="tool">
+      <h3>Website Audit Checker</h3>
+      <p>Check your site’s health instantly.</p>
+      <a class="button" href="https://example.com/audit-tool">Scan Site</a>
+    </div>
+
+    <div class="tool">
+      <h3>Link Cloaker</h3>
+      <p>Protect & shorten affiliate links.</p>
+      <a class="button" href="https://example.com/cloaker">Shorten</a>
+    </div>
+
+    <div class="tool">
+      <h3>Privacy Policy Generator</h3>
+      <p>Create privacy policies legally.</p>
+      <a class="button" href="https://example.com/privacy-gen">Generate Docs</a>
+    </div>
+
   </div>
+</section>
 </section>
   <footer>
     <p>© 2025 Ram Giri Studio | Kathmandu, Nepal</p>
